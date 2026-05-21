@@ -1,4 +1,4 @@
-export function Servicos() {
+export default function Servicos() {
   return (
     <main>
       <h1>Serviços</h1>
