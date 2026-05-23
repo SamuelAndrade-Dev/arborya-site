@@ -1,7 +1,12 @@
+import { SectionTitle } from "@/components/Ui/SectionTitle/SectionTitle";
+
 export default function Projetos() {
   return (
     <main>
-      <h1>Projetos</h1>
+      <SectionTitle 
+      title="Projetos"
+      subititle="Confira alguns dos nossos projetos"
+      />
     </main>
   );
 }

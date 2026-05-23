@@ -4,6 +4,11 @@ import { useState } from "react";
 import { Container } from "@/components/Ui/Container/Container";
 import { createWhatsappMessage } from "@/utils/createWhatsappMessage";
 import { Input } from "@/components/Ui/Input/Input";
+import { Select } from "@/components/Ui/Select/Select";
+import { clientTypes } from "@/data/clientTypes";
+import { terrainTypes } from "@/data/terrainTypes";
+import { ValidateContactForm } from "@/utils/validateContactForm";
+import { TextArea } from "@/components/Ui/TextArea/TextArea";
 
 export function ContactForm() {
   const [name, setName] = useState("");
@@ -11,22 +16,39 @@ export function ContactForm() {
   const [city, setCity] = useState("");
   const [terrainType, setTerrainType] = useState("");
   const [clientType, setClientType] = useState("");
+  const [message, setMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const message = createWhatsappMessage({
+    const error = ValidateContactForm({
       name,
       state,
       city,
       terrainType,
       clientType,
+      message,
     });
 
-    const whatsappNumber = "61993321729";
+    if (error) {
+      setErrorMessage(error);
+      return;
+    }
+
+    const whatsappMessage = createWhatsappMessage({
+      name,
+      state,
+      city,
+      terrainType,
+      clientType,
+      message,
+    });
+
+    const whatsappNumber = "61999369072";
 
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-      message,
+      whatsappMessage,
     )}`;
 
     window.open(url, "_blank");
@@ -61,30 +83,30 @@ export function ContactForm() {
             onChange={(event) => setCity(event.target.value)}
           />
 
-          <select
-            name="terrainType"
+          <Select
+            value={terrainType}
+            placeholder="Tipo de terreno"
             onChange={(event) => setTerrainType(event.target.value)}
-          >
-            <optgroup label="Terrenos">
-              <option value="Argiloso">Argiloso</option>
-              <option value="Pedregoso">Pedregoso</option>
-              <option value="Vermelha">Terra Vermelha</option>
-            </optgroup>
-          </select>
+            options={terrainTypes}
+          />
 
-          <select
-            name="clientType"
+          <Select
+            value={clientType}
+            placeholder="Tipo de cliente"
             onChange={(event) => setClientType(event.target.value)}
-          >
-            <optgroup label="Tipo de Cliente">
-              <option value="Cliente comum">Cliente Comum</option>
-              <option value="Empresa">Empresa</option>
-              <option value="Prefeitura">Prefeitura</option>
-            </optgroup>
-          </select>
+            options={clientTypes}
+          />
+
+          <TextArea
+            placeholder="Descreva a sua necessidade"
+            value={message}
+            onChange={(event) => setMessage(event.target.value)}
+          />
 
           <button type="submit">Enviar para Whatsapp</button>
         </form>
+
+        {errorMessage && <p>{errorMessage}</p>}
       </Container>
     </section>
   );

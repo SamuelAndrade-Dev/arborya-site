@@ -1,5 +1,5 @@
 import { Container } from "@/components/Ui/Container/Container";
-import { faqItems } from "@/app/data/faq";
+import { faqItems } from "@/data/faq";
 
 export function FAQ() {
   return (

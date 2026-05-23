@@ -1,7 +1,12 @@
+import { SectionTitle } from "@/components/Ui/SectionTitle/SectionTitle";
+
 export default function Sobre() {
   return (
     <main>
-      <h1>Sobre</h1>
+      <SectionTitle 
+      title="Sobre"
+      subititle="Sobre a nossa empresa e como trabalhamos"
+      />
     </main>
   );
 }

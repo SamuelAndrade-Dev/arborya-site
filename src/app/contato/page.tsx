@@ -1,7 +1,12 @@
+import { SectionTitle } from "@/components/Ui/SectionTitle/SectionTitle";
+
 export default function Contato() {
   return (
     <main>
-      <h1>Contato</h1>
+        <SectionTitle 
+        title="Contato"
+        subititle="Como entrar em contato"
+        />
     </main>
   );
 }

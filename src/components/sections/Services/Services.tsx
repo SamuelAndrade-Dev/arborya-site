@@ -1,5 +1,6 @@
 import { Container } from "@/components/Ui/Container/Container";
-import {services} from "@/app/data/services"
+import {services} from "@/data/services"
+import { ServiceCard } from "@/components/Ui/ServiceCard/ServiceCard";
 
 export function Services() {
   return (
@@ -11,10 +12,11 @@ export function Services() {
 
         <div>
           {services.map((service) => (
-            <div key={service.title}>
-              <h3>{service.title} </h3>
-              <p>{service.description} </p>
-            </div>
+            <ServiceCard
+              key={service.title}
+              title={service.title}
+              description={service.description}
+            />
           ))}
         </div>
       </Container>

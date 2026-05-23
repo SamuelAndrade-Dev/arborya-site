@@ -1,7 +1,12 @@
+import { SectionTitle } from "@/components/Ui/SectionTitle/SectionTitle";
+
 export default function Faq() {
   return (
     <main>
-      <h1>Faq</h1>
+      <SectionTitle 
+        title="FAQ"
+        subititle="Perguntas frequentes"
+      />
     </main>
   );
 }
