@@ -1,5 +1,5 @@
 import { Container } from "@/components/ui/Container/Container";
-import { NavLinks } from "./NavLinks";
+import { NavLinks } from "../../ui/NavLinks/NavLinks";
 import { MobileMenu } from "./MobileMenu";
 import styles from "./Header.module.css";
 import Image from "next/image";

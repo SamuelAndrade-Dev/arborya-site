@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { NavLinks } from "./NavLinks";
+import { NavLinks } from "../../ui/NavLinks/NavLinks";
 import styles from "./Mobile.module.css";
 
 export function MobileMenu() {
