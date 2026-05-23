@@ -1,0 +1,53 @@
+.benefits {
+  padding: 80px 0 80px;
+  background: var(--color-gray-100);
+}
+
+.container {
+    width: min(1400px, calc(100vw - 64px));
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  max-width: 520px;
+}
+
+.subtitle {
+  color: var(--color-green);
+}
+
+.title {
+  margin-top: 16px;
+  font-size: 2.6rem;
+  color: var(--color-green-dark);
+}
+
+.description {
+  margin-top: 24px;
+  color: var(--color-gray-700);
+}
+
+.wrapper {
+  display: flex;
+  gap: 5rem;
+}
+
+.card {
+  border: 1px solid var(--color-green-light);
+  border-radius: 1rem;
+  box-shadow: 0 10 20px;
+  padding: 20px;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  color: var(--color-green-dark);
+  margin-bottom: 16px;
+}
+
+.card p {
+  color: var(--color-gray-700);
+  line-height: 1.7;
+}

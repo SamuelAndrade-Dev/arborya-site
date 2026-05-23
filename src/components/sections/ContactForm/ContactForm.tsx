@@ -1,14 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { Container } from "@/components/Ui/Container/Container";
+import { Container } from "@/components/ui/Container/Container";
 import { createWhatsappMessage } from "@/utils/createWhatsappMessage";
-import { Input } from "@/components/Ui/Input/Input";
-import { Select } from "@/components/Ui/Select/Select";
+import { Input } from "@/components/ui/Input/Input";
+import { Select } from "@/components/ui/Select/Select";
 import { clientTypes } from "@/data/clientTypes";
 import { terrainTypes } from "@/data/terrainTypes";
 import { ValidateContactForm } from "@/utils/validateContactForm";
-import { TextArea } from "@/components/Ui/TextArea/TextArea";
+import { TextArea } from "@/components/ui/TextArea/TextArea";
 
 export function ContactForm() {
   const [name, setName] = useState("");

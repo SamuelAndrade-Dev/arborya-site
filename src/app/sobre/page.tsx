@@ -1,4 +1,4 @@
-import { SectionTitle } from "@/components/Ui/SectionTitle/SectionTitle";
+import { SectionTitle } from "@/components/ui/SectionTitle/SectionTitle";
 import { About } from "@/components/sections/About/About";
 
 export default function Sobre() {

@@ -1,4 +1,4 @@
-import { SectionTitle } from "@/components/Ui/SectionTitle/SectionTitle";
+import { SectionTitle } from "@/components/ui/SectionTitle/SectionTitle";
 import { Services } from "@/components/sections/Services/Services";
 
 export default function Servicos() {

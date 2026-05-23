@@ -1,10 +1,10 @@
-import { Container } from "@/components/Ui/Container/Container";
+import { Container } from "@/components/ui/Container/Container";
 import { NavLinks } from "./NavLinks";
 import { MobileMenu } from "./MobileMenu";
 import styles from "./Header.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/Ui/Button/Button";
+import { Button } from "@/components/ui/Button/Button";
 
 export function Header() {
   return (

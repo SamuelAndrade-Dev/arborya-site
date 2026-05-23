@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { NavLinks } from "./NavLinks";
+import styles from "./Mobile.module.css";
 
 export function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,11 +12,13 @@ export function MobileMenu() {
   }
 
   return (
-    <div>
-      <button onClick={toggleMenu}>Menu</button>
+    <div className={styles.wrapper}>
+      <button className={styles.button} onClick={toggleMenu}>
+        Menu
+      </button>
 
       {isOpen && (
-        <nav>
+        <nav className={styles.dropdown}>
           <NavLinks />
         </nav>
       )}

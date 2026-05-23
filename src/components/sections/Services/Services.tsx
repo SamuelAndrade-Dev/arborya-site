@@ -1,6 +1,6 @@
-import { Container } from "@/components/Ui/Container/Container";
+import { Container } from "@/components/ui/Container/Container";
 import {services} from "@/data/services"
-import { ServiceCard } from "@/components/Ui/ServiceCard/ServiceCard";
+import { ServiceCard } from "@/components/ui/ServiceCard/ServiceCard";
 
 export function Services() {
   return (

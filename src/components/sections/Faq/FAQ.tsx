@@ -1,4 +1,4 @@
-import { Container } from "@/components/Ui/Container/Container";
+import { Container } from "@/components/ui/Container/Container";
 import { faqItems } from "@/data/faq";
 
 export function FAQ() {
