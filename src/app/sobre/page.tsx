@@ -1,4 +1,5 @@
 import { SectionTitle } from "@/components/Ui/SectionTitle/SectionTitle";
+import { About } from "@/components/sections/About/About";
 
 export default function Sobre() {
   return (
@@ -7,6 +8,8 @@ export default function Sobre() {
       title="Sobre"
       subititle="Sobre a nossa empresa e como trabalhamos"
       />
+
+    <About />
     </main>
   );
 }

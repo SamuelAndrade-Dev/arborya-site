@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-white);
+
+  color: var(--color-black);
+
+  font-family: var(--font-primary);
+
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: none;
+
+  background: none;
+
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+}

@@ -1,18 +1,29 @@
 import { Container } from "@/components/Ui/Container/Container";
 import { Button } from "@/components/Ui/Button/Button";
+import styles from "./Hero.module.css";
 
 export function Hero() {
   return (
-    <section>
+    <section className={styles.hero}>
       <Container>
-        <h1>Soluções ecológicas</h1>
+        <div className={styles.content}>
+          <span className={styles.badge}>
+            Soluções ecológicas em saneamento
+          </span>
 
-        <p>
-          Fossas ecológicas e projetos sustentáveis para residencias, empresas e
-          prefeituras.
-        </p>
+          <h1 className={styles.title}>
+            Tecnologia sustentável para fossas ecológicas e saneamento básico
+          </h1>
 
-        <Button href="/contato">Solicitar Orçamentos</Button>
+          <p className={styles.description}>
+            Projetos modernos, eficientes e ambientalmente responsáveis para
+            residências, empresas e prefeituras.
+          </p>
+
+          <div className={styles.actions}>
+            <Button href="/contato">Solicitar orçamento</Button>
+          </div>
+        </div>
       </Container>
     </section>
   );

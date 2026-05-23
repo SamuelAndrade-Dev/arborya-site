@@ -1,4 +1,5 @@
 import Link from "next/link";
+import styles from "./Button.module.css"
 
 type ButtonProps = {
   children: React.ReactNode
@@ -19,7 +20,7 @@ export function Button({
     }
 
     return (
-        <button>
+        <button className={styles.button}>
             {children}
         </button>
     )

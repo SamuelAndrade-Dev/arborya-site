@@ -1,0 +1,19 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 22px;
+  border-radius: 999px;
+
+  background: var(--color-green-dark);
+  color: var(--color-white);
+
+  font-weight: 600;
+
+  transition: var(--transition-default);
+}
+
+.button:hover {
+  background: var(--color-green);
+}
