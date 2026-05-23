@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { NavLinks } from "./NavLinks";
 
 export function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,9 +15,9 @@ export function MobileMenu() {
       <button onClick={toggleMenu}>Menu</button>
 
       {isOpen && (
-        <div>
-          <p>Menu aberto</p>
-        </div>
+        <nav>
+          <NavLinks />
+        </nav>
       )}
     </div>
   );
