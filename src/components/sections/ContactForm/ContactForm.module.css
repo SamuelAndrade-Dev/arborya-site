@@ -1,0 +1,33 @@
+.contact {
+    padding: 80px 0;
+}
+
+.form {
+    margin-top: 40px;
+    max-width: 720px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.full {
+    grid-column: 1 / -1;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.error {
+    margin-top: 16px;
+    color: red;
+    font-weight: 600;    
+}
+
+@media (max-width: 768) {
+    .form {
+        grid-template-columns: 1fr;
+    }
+
+    .full {
+        grid-column: auto;
+    }
+}

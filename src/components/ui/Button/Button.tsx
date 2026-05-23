@@ -5,14 +5,15 @@ type ButtonProps = {
   children: React.ReactNode;
   href?: string;
   variant?: "primary" | "secondary";
+  type?: "button" | "reset" | "submit";
 };
 
-export function Button({ children, href, variant = "primary" }: ButtonProps) {
+export function Button({ children, href, variant = "primary", type = "button", }: ButtonProps) {
   const className = `${styles.button} ${styles[variant]}`;
 
   if (href) {
     return (
-      <Link href={href} className={className}>
+      <Link href={href} className={className} type={type}>
         {children}
       </Link>
     );

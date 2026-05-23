@@ -1,5 +1,6 @@
 "use client";
 
+import styles from "./ContactForm.module.css";
 import { useState } from "react";
 import { Container } from "@/components/ui/Container/Container";
 import { createWhatsappMessage } from "@/utils/createWhatsappMessage";
@@ -9,6 +10,7 @@ import { clientTypes } from "@/data/clientTypes";
 import { terrainTypes } from "@/data/terrainTypes";
 import { ValidateContactForm } from "@/utils/validateContactForm";
 import { TextArea } from "@/components/ui/TextArea/TextArea";
+import { Button } from "@/components/ui/Button/Button";
 
 export function ContactForm() {
   const [name, setName] = useState("");
@@ -21,6 +23,7 @@ export function ContactForm() {
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    setErrorMessage("");
 
     const error = ValidateContactForm({
       name,
@@ -55,58 +58,62 @@ export function ContactForm() {
   }
 
   return (
-    <section>
+    <section className={styles.contact}>
       <Container>
-        <span>Contato</span>
+        <div className={styles.wrapper}>
+          <span>Contato</span>
 
-        <h2>Solicite um orçamento</h2>
+          <h2>Solicite um orçamento</h2>
 
-        <form onSubmit={handleSubmit}>
-          <Input
-            type="text"
-            placeholder="Nome"
-            value={name}
-            onChange={(event) => setName(event.target.value)}
-          />
+          <form className={styles.form} onSubmit={handleSubmit}>
+            <Input
+              type="text"
+              placeholder="Nome"
+              value={name}
+              onChange={(event) => setName(event.target.value)}
+            />
 
-          <Input
-            type="text"
-            placeholder="Estado"
-            value={state}
-            onChange={(event) => setState(event.target.value)}
-          />
+            <Input
+              type="text"
+              placeholder="Estado"
+              value={state}
+              onChange={(event) => setState(event.target.value)}
+            />
 
-          <Input
-            type="text"
-            placeholder="Qual Cidade do estado"
-            value={city}
-            onChange={(event) => setCity(event.target.value)}
-          />
+            <Input
+              type="text"
+              placeholder="Qual Cidade do estado"
+              value={city}
+              onChange={(event) => setCity(event.target.value)}
+            />
 
-          <Select
-            value={terrainType}
-            placeholder="Tipo de terreno"
-            onChange={(event) => setTerrainType(event.target.value)}
-            options={terrainTypes}
-          />
+            <Select
+              value={terrainType}
+              placeholder="Tipo de terreno"
+              onChange={(event) => setTerrainType(event.target.value)}
+              options={terrainTypes}
+            />
 
-          <Select
-            value={clientType}
-            placeholder="Tipo de cliente"
-            onChange={(event) => setClientType(event.target.value)}
-            options={clientTypes}
-          />
+            <Select
+              value={clientType}
+              placeholder="Tipo de cliente"
+              onChange={(event) => setClientType(event.target.value)}
+              options={clientTypes}
+            />
 
-          <TextArea
-            placeholder="Descreva a sua necessidade"
-            value={message}
-            onChange={(event) => setMessage(event.target.value)}
-          />
+            <TextArea
+              placeholder="Descreva a sua necessidade"
+              value={message}
+              onChange={(event) => setMessage(event.target.value)}
+            />
 
-          <button type="submit">Enviar para Whatsapp</button>
-        </form>
+            <div className={styles.full}>
+              <Button>Enviar para Whatsapp</Button>
+            </div>
+          </form>
 
-        {errorMessage && <p>{errorMessage}</p>}
+          {errorMessage && <p className={styles.error}>{errorMessage}</p>}
+        </div>
       </Container>
     </section>
   );

@@ -14,29 +14,24 @@ export function ValidateContactForm({
   terrainType,
   clientType,
   message,
-}: ValidateContactFormProps) {
+}: ValidateContactFormProps): string | null {
   if (!name.trim()) {
-    return;
+    return "Por favor, informe o seu nome.";
   }
-
   if (!state.trim()) {
-    return;
+    return "Por favor, informe o estado.";
   }
-
   if (!city.trim()) {
-    return;
+    return "Por favor, informe a cidade.";
   }
-
   if (!terrainType) {
-    return;
+    return "Por favor, selecione o tipo de terreno.";
   }
-
   if (!clientType) {
-    return;
+    return "Por favor, selecione o tipo de cliente.";
   }
-
   if (!message.trim()) {
-    return;
+    return "Por favor, descreva a sua necessidade.";
   }
 
   return null;

@@ -1,3 +1,5 @@
+import styles from "./TextArea.module.css"
+
 type TextAreaProps = {
   placeholder: string;
   value: string;
@@ -6,6 +8,6 @@ type TextAreaProps = {
 
 export function TextArea({ placeholder, value, onChange }: TextAreaProps) {
   return (
-    <textarea placeholder="{placeholder}" value={value} onChange={onChange} />
+    <textarea className={styles.textarea} placeholder={placeholder} value={value} onChange={onChange} />
   );
 }

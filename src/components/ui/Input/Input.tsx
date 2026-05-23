@@ -1,3 +1,5 @@
+import styles from "./Input.module.css"
+
 type InputProps = {
   type: string;
   placeholder: string;
@@ -12,6 +14,7 @@ export function Input({ type, placeholder, value, onChange }: InputProps) {
       placeholder={placeholder}
       value={value}
       onChange={onChange}
+      className={styles.input}
     />
   );
 }

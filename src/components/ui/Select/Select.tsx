@@ -1,3 +1,5 @@
+import styles from "./Select.module.css"
+
 type SelectProps = {
   value: string;
 
@@ -10,7 +12,7 @@ type SelectProps = {
 
 export function Select({ value, placeholder, onChange, options }: SelectProps) {
   return (
-    <select value={value} onChange={onChange}>
+    <select className={styles.select} value={value} onChange={onChange}>
       <option value="" disabled>
         {placeholder}
       </option>
