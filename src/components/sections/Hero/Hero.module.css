@@ -72,3 +72,45 @@
   border-radius: 22px;
   object-fit: cover;
 }
+
+@media (max-width: 1024) {
+  .wrapper {
+    grid-template-columns:  1fr;
+    gap: 48;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768) {
+  .hero {
+    padding: 80px 0 40px;
+  }
+
+  .wrapper {
+    width: min(100vw - 32px ) ;
+  }
+
+  .title {
+    font-size: 2.4rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .image {
+    height: 200px;
+  }
+}

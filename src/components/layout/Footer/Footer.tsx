@@ -24,13 +24,13 @@ export function Footer() {
               ecológicas.
             </p>
 
-            <h3>Idealizador do Projeto: Manoel Batista de Andrade</h3>
-
+            <span>
+              Idealizador do Projeto: <strong>Manoel Batista de Andrade</strong>
+            </span>
           </div>
 
           <div className={styles.links}>
             <h3>Navegação</h3>
-
             <nav>
               <NavLinks />
             </nav>
@@ -38,9 +38,7 @@ export function Footer() {
 
           <div className={styles.contact}>
             <h3>Contato</h3>
-
             <p>(00) 00000-0000</p>
-
             <p>grupoarborya@gmail.com</p>
           </div>
         </div>

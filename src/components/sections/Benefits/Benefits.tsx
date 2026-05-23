@@ -35,7 +35,7 @@ export function Benefits() {
             </p>
           </div>
 
-          <div className={styles.wrapper}>
+          <div className={styles.cards}>
             {benefits.map((benefit) => (
               <article key={benefit.title} className={styles.card}>
                 <h3>{benefit.title}</h3>

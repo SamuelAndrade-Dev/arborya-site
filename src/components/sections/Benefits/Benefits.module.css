@@ -29,9 +29,11 @@
   color: var(--color-gray-700);
 }
 
-.wrapper {
-  display: flex;
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 5rem;
+  flex: 1;
 }
 
 .card {
@@ -50,4 +52,34 @@
 .card p {
   color: var(--color-gray-700);
   line-height: 1.7;
+}
+
+@media (max-width: 1024) {
+  .container {
+
+    flex-direction: column;
+    gap: 48px;
+  }
+  
+  .content {
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 2rem ;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+    .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768) {
+   .cards {
+    grid-template-columns: 1fr;
+  }
 }
