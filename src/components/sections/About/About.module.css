@@ -47,3 +47,25 @@
 .image {
     border-radius: 1rem;    
 }
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .image {
+    margin-top: 2rem;
+    width: 100%;
+    height: auto;
+  }
+}
