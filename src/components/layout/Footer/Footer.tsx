@@ -1,4 +1,4 @@
-import styles from "./Footter.module.css";
+import styles from "./Footer.module.css";
 import { NavLinks } from "../../ui/NavLinks/NavLinks";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,11 +9,11 @@ export function Footer() {
       <div className={styles.container}>
         <div className={styles.top}>
           <div className={styles.brand}>
-            <h2>Grupo Arborya</h2>
+            <h2>Grupo Bio Soluções</h2>
             <Link href="/">
               <Image
                 src="/logo-branca.png"
-                alt="Logo Arborya"
+                alt="Logo Bio Soluções"
                 width={120}
                 height={50}
                 className={styles.logo}
@@ -39,12 +39,13 @@ export function Footer() {
           <div className={styles.contact}>
             <h3>Contato</h3>
             <p>(00) 00000-0000</p>
-            <p>grupoarborya@gmail.com</p>
+            <p>@BioSolucoes</p>
+            <p>grupobiol@gmail.com</p>
           </div>
         </div>
 
         <div className={styles.bottom}>
-          <p>© 2026 Arborya. Todos os direitos reservados.</p>
+          <p>© 2026 Bio Soluções. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

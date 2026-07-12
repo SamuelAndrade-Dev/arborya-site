@@ -4,7 +4,7 @@ import {Footer} from "@/components/layout/Footer/Footer"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Arborya",
+  title: "Bio Soluções",
   description: "Fossas ecológicas e soluções em saneamento básico.",
 };
 
