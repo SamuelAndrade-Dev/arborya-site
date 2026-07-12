@@ -1,11 +1,9 @@
-import { Container } from "@/components/ui/Container/Container";
 import styles from "./About.module.css";
 import Image from "next/image";
 
 export function About() {
   return (
     <section className={styles.wrapper}>
-      <Container>
         <div className={styles.container}>
           <div className={styles.text}>
             <span className={styles.badge}>Sobre a Arborya</span>
@@ -38,7 +36,6 @@ export function About() {
             />
           </div>
         </div>
-      </Container>
     </section>
   );
 }

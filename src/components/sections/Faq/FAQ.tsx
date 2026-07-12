@@ -1,20 +1,41 @@
+"use client";
+
 import { Container } from "@/components/ui/Container/Container";
 import { faqItems } from "@/data/faq";
+import styles from "./FAQ.module.css";
+import { useState } from "react";
 
 export function FAQ() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  function toggleFAQ(index: number) {
+    setOpenIndex(openIndex === index ? null : index);
+  }
+
   return (
-    <section>
+    <section className={styles.faqSection}>
       <Container>
-        <span>FAQ</span>
+        <span className={styles.badge}>FAQ</span>
 
-        <h2>Perguntas frequentes</h2>
+        <h3>Perguntas Frequentes</h3>
 
-        <div>
-          {faqItems.map((item) => (
-            <div key={item.question}>
-              <h3>{item.question} </h3>
+        <div className={styles.faqList}>
+          {faqItems.map((faqItems, index) => (
+            <div className={styles.faqItem} key={index}>
+              <button
+                className={styles.question}
+                onClick={() => toggleFAQ(index)}
+              >
+                <span>{faqItems.question}</span>
 
-              <p>{item.answer}</p>
+                <span>{openIndex === index ? "-" : "+"}</span>
+              </button>
+
+              {openIndex === index && (
+                <div className={styles.answer}>
+                  <p>{faqItems.answer}</p>
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -22,3 +43,4 @@ export function FAQ() {
     </section>
   );
 }
+2

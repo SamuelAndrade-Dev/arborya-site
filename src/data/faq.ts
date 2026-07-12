@@ -14,4 +14,29 @@ export const faqItems = [
     answer:
       "Sim. O formulário do site envia os dados preenchidos diretamente para uma conversa no WhatsApp.",
   },
+  {
+    question: "O orçamento é feito pelo WhatsApp?",
+    answer:
+      "Sim. O formulário do site envia os dados preenchidos diretamente para uma conversa no WhatsApp.",
+  },
+  {
+    question: "O orçamento é feito pelo WhatsApp?",
+    answer:
+      "Sim. O formulário do site envia os dados preenchidos diretamente para uma conversa no WhatsApp.",
+  },
+  {
+    question: "O orçamento é feito pelo WhatsApp?",
+    answer:
+      "Sim. O formulário do site envia os dados preenchidos diretamente para uma conversa no WhatsApp.",
+  },
+  {
+    question: "O orçamento é feito pelo WhatsApp?",
+    answer:
+      "Sim. O formulário do site envia os dados preenchidos diretamente para uma conversa no WhatsApp.",
+  },
+  {
+    question: "O orçamento é feito pelo WhatsApp?",
+    answer:
+      "Sim. O formulário do site envia os dados preenchidos diretamente para uma conversa no WhatsApp.",
+  },
 ];
